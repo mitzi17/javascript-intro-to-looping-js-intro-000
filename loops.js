@@ -16,7 +16,7 @@ function whileLoop(n) {
   return 'done';
 }
 
-function doWhileLoop(array) {
+function doWhileLoop(i) {
         var i = 0;
 
 function incrementVariable() {
@@ -24,11 +24,8 @@ function incrementVariable() {
 }
 
 do {
-  console.log('array.length = ' + array.length + ' and i = ' + i);
-  array = array.slice(1);
+  console.log('I run once regardless.');
   incrementVariable();
-} while (array.length > 0 && i < 5);
-
-return array;
+} while (incrementVariable() < 5);
 
 }
